@@ -47,6 +47,7 @@ public class GameManager
         UITimer.Stop();
         timer.Dispose();
         UITimer.Dispose();
+        timeLeft--;
         state = StateType.END;
     }
 }
