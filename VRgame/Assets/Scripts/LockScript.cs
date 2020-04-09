@@ -6,6 +6,7 @@ public class LockScript : MonoBehaviour
 {
 
     public string keyName = "Key";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,8 @@ public class LockScript : MonoBehaviour
     {
         if (col.collider.CompareTag(keyName))
         {
-
+            //Unlock door
+            
             //Destroy object last
             Destroy(col.collider.gameObject);
             Destroy(this.gameObject);
