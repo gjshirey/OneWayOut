@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LockScript : MonoBehaviour
 {
+
+    public string keyName = "Key";
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +15,12 @@ public class LockScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.collider.CompareTag("Key"))
+        if (col.collider.CompareTag(keyName))
         {
-            //Add unlock code here
 
             //Destroy object last
             Destroy(col.collider.gameObject);

@@ -11,10 +11,11 @@ public class PlayerController : MonoBehaviour
     public float angle = 5;
     Vector3 axis;
     Vector3 forward;
+    private CharacterController characterController;
     // Start is called before the first frame update
     void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
 	forward = transform.forward;
 	if (Mathf.Abs(Vector3.SignedAngle(axis, forward, Vector3.up)) < angle){
             Vector3 direction = Player.instance.hmdTransform.TransformDirection(axis);
-            transform.position += speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up);
+            characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0,9.81f,0)*Time.deltaTime);
 	}
     }
 }
