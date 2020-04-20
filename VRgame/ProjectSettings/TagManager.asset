@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Key
   - MasterDoor
+  - bedroomKey
+  - diningKey
+  - kitchenKey
+  - finalKey
+  - bathroomKey
   layers:
   - Default
   - TransparentFX
