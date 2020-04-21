@@ -10,7 +10,6 @@ public class TimerController : MonoBehaviour
     void Start()
     {
         timerUI = GetComponent<TextMeshPro>();
-        GameManager.Instance.StartTimer(300);
     }
 
     // Update is called once per frame

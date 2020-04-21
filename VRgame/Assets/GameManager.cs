@@ -1,4 +1,5 @@
 ﻿using System.Timers;
+using UnityEngine;
 public class GameManager
 {
     public enum StateType

@@ -21,11 +21,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	axis = new Vector3(input.axis.x, 0, input.axis.y);
-	forward = transform.forward;
-	if (Mathf.Abs(Vector3.SignedAngle(axis, forward, Vector3.up)) < angle){
-            Vector3 direction = Player.instance.hmdTransform.TransformDirection(axis);
-            characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0,9.81f,0)*Time.deltaTime);
-	}
+        if (GameManager.state == GameManager.StateType.PLAY)
+        {
+            axis = new Vector3(input.axis.x, 0, input.axis.y);
+            forward = transform.forward;
+            if (Mathf.Abs(Vector3.SignedAngle(axis, forward, Vector3.up)) < angle)
+            {
+                Vector3 direction = Player.instance.hmdTransform.TransformDirection(axis);
+                characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
+            }
+        }
     }
 }
