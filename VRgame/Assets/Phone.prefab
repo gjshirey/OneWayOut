@@ -94,8 +94,9 @@ GameObject:
   - component: {fileID: 7539790106715855147}
   - component: {fileID: 7539790106715855146}
   - component: {fileID: 7539790106715855145}
+  - component: {fileID: 8779348030834410035}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -108,13 +109,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7539790106715855575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.000067}
   m_LocalScale: {x: 0.006, y: 0.006, z: 1}
   m_Children: []
   m_Father: {fileID: 4202103111520165640}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.001229}
@@ -285,6 +286,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   m_maskType: 0
+--- !u!114 &8779348030834410035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539790106715855575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 120b7ea76bd8bd6a09ab8d3324194f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7539790108323438806
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7539790108323438807}
   - component: {fileID: 7539790108323454760}
+  - component: {fileID: 7964154998480844325}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -377,3 +391,20 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &7964154998480844325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539790108323438806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a000ed7eb95fbeb78a7d2d7cc50934f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 7539790108323454760}
+  trigger:
+    actionPath: /actions/default/in/GrabPinch
+    needsReinit: 0
+  inputSource: 2
