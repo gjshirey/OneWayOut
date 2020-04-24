@@ -28,8 +28,10 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(Vector3.SignedAngle(axis, forward, Vector3.up)) < angle)
             {
                 Vector3 direction = Player.instance.hmdTransform.TransformDirection(axis);
-                characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
+                //characterController.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
+                transform.position += speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up);
             }
         }
     }
 }
+// - new Vector3(0, 9.81f, 0)
